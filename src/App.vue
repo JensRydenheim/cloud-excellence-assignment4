@@ -11,8 +11,8 @@ export default {
     };
   },
   async mounted() {
-    const { text } = await (await fetch("/api/message")).json();
-    this.message = text;
+    const { body } = await (await fetch("/api/content?name=Softhouse")).json();
+    this.message = body;
   },
 };
 </script>
